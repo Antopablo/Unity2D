@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar mHealthbar;
     public static PlayerHealth instance;
 
+    //Singleton
     private void Awake()
     {
         if (instance != null)
@@ -36,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            TakeDamage(20);
+            TakeDamage(75);
         }
     }
 
@@ -46,6 +47,13 @@ public class PlayerHealth : MonoBehaviour
         {
             mCurrentHealth -= _damage;
             mHealthbar.setHealth(mCurrentHealth);
+
+            if (mCurrentHealth <= 0)
+            {
+                Die();
+                return;
+            }
+
             mIsInvincible = true;
             StartCoroutine(InvincibilityFlash());
             StartCoroutine(HandleInvincibleDelay());
@@ -64,6 +72,16 @@ public class PlayerHealth : MonoBehaviour
 
         mHealthbar.setHealth(mCurrentHealth);
 
+    }
+
+    public void Die()
+    {
+        Debug.Log("Le joueur est éliminé");
+        //Je désactive le script
+        PlayerMovements.instance.enabled = false;
+        PlayerMovements.instance.mAnimator.SetTrigger("Die");
+        PlayerMovements.instance.mRb.bodyType = RigidbodyType2D.Kinematic;
+        PlayerMovements.instance.mPlayerColider.enabled = false;
     }
 
     public IEnumerator InvincibilityFlash()

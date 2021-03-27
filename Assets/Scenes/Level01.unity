@@ -15017,6 +15017,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5412754595286200485, guid: 28478a3c260a1344a923734c5acf403a, type: 3}
   m_PrefabInstance: {fileID: 5412754595725751036}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &721224282 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5412754595286200482, guid: 28478a3c260a1344a923734c5acf403a, type: 3}
+  m_PrefabInstance: {fileID: 5412754595725751036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &883848960
 GameObject:
   m_ObjectHideFlags: 0
@@ -15981,9 +15986,17 @@ PrefabInstance:
       propertyPath: mClimbSpeed
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 5412754595286200481, guid: 28478a3c260a1344a923734c5acf403a, type: 3}
+      propertyPath: mPlayerColider
+      value: 
+      objectReference: {fileID: 721224282}
     - target: {fileID: 5412754595286200485, guid: 28478a3c260a1344a923734c5acf403a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412754595286200486, guid: 28478a3c260a1344a923734c5acf403a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5412754595286200487, guid: 28478a3c260a1344a923734c5acf403a, type: 3}
       propertyPath: m_RootOrder

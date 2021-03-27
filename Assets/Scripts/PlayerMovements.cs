@@ -11,6 +11,9 @@ public class PlayerMovements : MonoBehaviour
     public Rigidbody2D mRb;
     public Animator mAnimator;
     public SpriteRenderer mSpriteRenderer;
+    public static PlayerMovements instance;
+    public CapsuleCollider2D mPlayerColider;
+
 
     public float mMoveSpeed;
     public float mClimbSpeed;
@@ -22,6 +25,17 @@ public class PlayerMovements : MonoBehaviour
     public Transform mGroundCheck;
     public float mGroundCheckRadius;
     public LayerMask mCollisionLayer;
+
+    //Singleton
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerMovements dans la scène.");
+            return;
+        }
+        instance = this;
+    }
 
     void Update()
     {
@@ -37,6 +51,7 @@ public class PlayerMovements : MonoBehaviour
         mHorizontalMovement = Input.GetAxis("Horizontal") * mMoveSpeed * Time.deltaTime;
 
     }
+    
 
     void FixedUpdate()
     {
