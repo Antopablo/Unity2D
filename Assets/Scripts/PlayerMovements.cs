@@ -39,7 +39,11 @@ public class PlayerMovements : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && mIsGrounded == true)
+        mHorizontalMovement = Input.GetAxis("Horizontal") * mMoveSpeed * Time.fixedDeltaTime;
+        mVerticallMovement = Input.GetAxis("Vertical") * mClimbSpeed * Time.fixedDeltaTime;
+
+
+        if (Input.GetButtonDown("Jump") && mIsGrounded == true && !mIsClimbing)
         {
             mIsJumping = true;
         }
@@ -47,17 +51,11 @@ public class PlayerMovements : MonoBehaviour
 
         mAnimator.SetFloat("Speed", Mathf.Abs(mRb.velocity.x)); // Renvoie la valeur absolue de la valeur
         mAnimator.SetBool("IsClimbing", mIsClimbing);
-
-        mHorizontalMovement = Input.GetAxis("Horizontal") * mMoveSpeed * Time.deltaTime;
-
     }
     
 
     void FixedUpdate()
     {
-        mHorizontalMovement = Input.GetAxis("Horizontal") * mMoveSpeed * Time.deltaTime;
-        mVerticallMovement = Input.GetAxis("Vertical") * mClimbSpeed * Time.deltaTime;
-
         mIsGrounded = Physics2D.OverlapCircle(mGroundCheck.position, mGroundCheckRadius, mCollisionLayer);
 
         MovePlayer(mHorizontalMovement, mVerticallMovement);

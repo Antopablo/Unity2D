@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            TakeDamage(75);
+            TakeDamage(110);
         }
     }
 
@@ -76,12 +76,25 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Le joueur est éliminé");
-        //Je désactive le script
+        //Je désactive le script de mouvement
         PlayerMovements.instance.enabled = false;
+
         PlayerMovements.instance.mAnimator.SetTrigger("Die");
-        PlayerMovements.instance.mRb.bodyType = RigidbodyType2D.Kinematic;
+        PlayerMovements.instance.mRb.bodyType = RigidbodyType2D.Static;
         PlayerMovements.instance.mPlayerColider.enabled = false;
+
+        GameOverManager.instance.OnPlayerDeath();
+    }
+
+    public void Respawn()
+    {
+        PlayerMovements.instance.enabled = true;
+
+        PlayerMovements.instance.mAnimator.SetTrigger("Respawn");
+        PlayerMovements.instance.mRb.bodyType = RigidbodyType2D.Dynamic;
+        PlayerMovements.instance.mPlayerColider.enabled = true;
+        mCurrentHealth = mMaxHealth;
+        mHealthbar.setHealth(mCurrentHealth);
     }
 
     public IEnumerator InvincibilityFlash()
