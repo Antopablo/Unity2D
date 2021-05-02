@@ -81,6 +81,7 @@ public class PlayerHealth : MonoBehaviour
 
         PlayerMovements.instance.mAnimator.SetTrigger("Die");
         PlayerMovements.instance.mRb.bodyType = RigidbodyType2D.Static;
+        //PlayerMovements.instance.mRb.velocity = Vector3.zero;
         PlayerMovements.instance.mPlayerColider.enabled = false;
 
         GameOverManager.instance.OnPlayerDeath();

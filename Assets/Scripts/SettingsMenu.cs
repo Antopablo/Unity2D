@@ -1,0 +1,69 @@
+﻿using UnityEngine;
+using System.Linq;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.Audio;
+
+public class SettingsMenu : MonoBehaviour
+{
+    public AudioMixer mAudioMixer;
+    public Dropdown mResolutionDropDown;
+    Resolution[] mResolutions;
+
+    public void Start()
+    {
+        mResolutions = Screen.resolutions.Select(resol => new Resolution { width = resol.width, height = resol.height }).Distinct().ToArray();
+        mResolutionDropDown.ClearOptions();
+
+        AddDataSourceDropDown();
+        DefineDefaultValueDropDrown();
+
+        Screen.fullScreen = true;
+        
+    }
+    public void SetVolume(float pVolume)
+    {
+        mAudioMixer.SetFloat("volume", pVolume);
+    }
+
+    public void SetFullScreen(bool pIsFullScreen)
+    {
+        Screen.fullScreen = pIsFullScreen;
+    }
+
+    private void AddDataSourceDropDown()
+    {
+        List<string> lResolution = new List<string>();
+
+        for (int i = 0; i < mResolutions.Length; i++)
+        {
+            string lOption = mResolutions[i].width.ToString() + " x " + mResolutions[i].height.ToString();
+            lResolution.Add(lOption);
+                    }
+
+        mResolutionDropDown.AddOptions(lResolution);
+    }
+
+    private void DefineDefaultValueDropDrown()
+    {
+        int lCurrentResolutionIndex = 0;
+
+        for (int i = 0; i < mResolutions.Length; i++)
+        {
+            if (mResolutions[i].width == Screen.width && mResolutions[i].height == Screen.height)
+            {
+                lCurrentResolutionIndex = i;
+            }
+        }
+
+        mResolutionDropDown.value = lCurrentResolutionIndex;
+        mResolutionDropDown.RefreshShownValue();
+       
+    }
+
+    public void SetResolution(int pResolutionIndex)
+    {
+        Resolution lResolution = mResolutions[pResolutionIndex];
+        Screen.SetResolution(lResolution.width, lResolution.height, Screen.fullScreen);
+    }
+}
