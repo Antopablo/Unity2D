@@ -220,6 +220,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -352,7 +354,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 54023d06a89161c7a2e650c3842736ec
+      Hash: 911bfd2758f7af7df919342f2c77b492
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SettingsMenu
@@ -400,7 +402,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: e5dc741da0e138e4f4b9e55abfbfd88e
+      Hash: 1bfe6619b16fc7b490b136d15659e8e9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WeakSpot
@@ -514,13 +516,13 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 8f5bf54ffa7a4a8d5c4fbede825586c2
+      Hash: 0aee3c6feb6f407c5735327f0c3f2655
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AudioManager
   - hash:
       serializedVersion: 2
-      Hash: fdcfff3f0eff60bec16d28800f453243
+      Hash: 559e2524d9e617b89bee6cee6c46f685
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerHealth
@@ -658,7 +660,7 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: c8e24895e7c736af22ca61f93a1929a4
+      Hash: 8af3884665967a4481401032514a44bd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealPowerUp
@@ -676,13 +678,13 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 206d438110886f81d835e8b06f8edb60
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickUpObject
   - hash:
       serializedVersion: 2
-      Hash: 9f2d3b24178df7486aeb99d2edaf9875
+      Hash: 0717e3bb448697c5ddc5a62fd75bb3fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovements
@@ -844,7 +846,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 14dc2c889f744c2ad150269dc55fd00e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Checkpoint

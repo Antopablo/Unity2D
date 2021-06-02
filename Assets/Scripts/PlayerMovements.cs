@@ -26,6 +26,8 @@ public class PlayerMovements : MonoBehaviour
     public float mGroundCheckRadius;
     public LayerMask mCollisionLayer;
 
+    public AudioClip mJumpSound;
+
     //Singleton
     private void Awake()
     {
@@ -43,8 +45,9 @@ public class PlayerMovements : MonoBehaviour
         mVerticallMovement = Input.GetAxis("Vertical") * mClimbSpeed * Time.fixedDeltaTime;
 
 
-        if (Input.GetButtonDown("Jump") && mIsGrounded == true && !mIsClimbing)
-        {
+        if (Input.GetButtonDown("Jump") && mIsGrounded == true && !mIsClimbing )
+        {            
+            AudioManager.instance.PlayClickAt(mJumpSound, transform.position);
             mIsJumping = true;
         }
         Flip(mRb.velocity.x);

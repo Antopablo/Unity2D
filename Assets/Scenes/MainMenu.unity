@@ -1041,43 +1041,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2978806166513062499, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806166513062499, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806166924689422, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806166924689422, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806167586340188, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806167586340188, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806167586340188, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806167596001468, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806167596001468, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806167596001468, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978806168062118349, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
       propertyPath: m_IsActive
@@ -1179,5 +1179,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 199715495}
+    - target: {fileID: 2978806168320798440, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCloseSettingsClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978806168320798440, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8adcf266822b9eb45829b4ed9d60a25a, type: 3}

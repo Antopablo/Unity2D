@@ -15,6 +15,9 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar mHealthbar;
     public static PlayerHealth instance;
 
+    public AudioClip mHitSound;
+    public AudioClip mDieSound;
+
     //Singleton
     private void Awake()
     {
@@ -45,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!mIsInvincible)
         {
+            AudioManager.instance.PlayClickAt(mHitSound, transform.position);
             mCurrentHealth -= _damage;
             mHealthbar.setHealth(mCurrentHealth);
 
@@ -76,6 +80,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
+
+        AudioManager.instance.PlayClickAt(mDieSound, transform.position);
         //Je désactive le script de mouvement
         PlayerMovements.instance.enabled = false;
 

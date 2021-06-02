@@ -130,10 +130,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd46e78cd2f0ca47ad2877d1761027f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mIsClimbing: 0
   mRb: {fileID: 5412754595286200480}
   mAnimator: {fileID: 5412754595286200476}
   mSpriteRenderer: {fileID: 5412754595286200486}
+  mPlayerColider: {fileID: 5412754595286200482}
   mMoveSpeed: 250
+  mClimbSpeed: 150
   mJumpForce: 300
   mGroundCheck: {fileID: 5412754593772568057}
   mGroundCheckRadius: 0.41
@@ -199,6 +202,7 @@ MonoBehaviour:
   mInvisibilityFlashDelay: 0.2
   mGraphics: {fileID: 5412754595286200486}
   mHealthbar: {fileID: 0}
+  mHitSound: {fileID: 8300000, guid: be799553bce416848899725cc303c1a6, type: 3}
 --- !u!70 &5412754595286200482
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

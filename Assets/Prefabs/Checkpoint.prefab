@@ -173,3 +173,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979dfb0ee0c2929439f9117eae0e5f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mCheckpointReachedSound: {fileID: 8300000, guid: f532338b6b3364845800324380c9081a, type: 3}

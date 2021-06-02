@@ -3,6 +3,7 @@
 public class Checkpoint : MonoBehaviour
 {
     private Transform mPlayerSpawn;
+    public AudioClip mCheckpointReachedSound;
 
 
     private void Awake()
@@ -14,6 +15,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            AudioManager.instance.PlayClickAt(mCheckpointReachedSound, transform.position);
             mPlayerSpawn.position = transform.position;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
