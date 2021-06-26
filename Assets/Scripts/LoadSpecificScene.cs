@@ -6,7 +6,7 @@ public class LoadSpecificScene : MonoBehaviour
 {
 
     public string pSceneName;
-    public Animator pFadeSystem;
+    private Animator pFadeSystem;
 
     private void Awake()
     {
@@ -23,6 +23,7 @@ public class LoadSpecificScene : MonoBehaviour
 
     public IEnumerator LoadNextScene()
     {
+        LoadAndSaveData.instance.SaveData();
         pFadeSystem.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(pSceneName);

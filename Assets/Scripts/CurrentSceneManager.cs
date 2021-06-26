@@ -3,8 +3,8 @@
 public class CurrentSceneManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool isPlayerPresentByDefault = false;
     public int mCoinsPickedUpInThisSceneCount;
+    public Vector3 mRespawnPoint;
 
     public static CurrentSceneManager instance;
     private void Awake()
@@ -15,6 +15,8 @@ public class CurrentSceneManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        mRespawnPoint = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 
 }
