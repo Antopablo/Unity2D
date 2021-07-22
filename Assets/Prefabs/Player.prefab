@@ -143,6 +143,7 @@ MonoBehaviour:
   mCollisionLayer:
     serializedVersion: 2
     m_Bits: 1
+  mJumpSound: {fileID: 8300000, guid: ae39542c61f49144082d206134b0ed45, type: 3}
 --- !u!50 &5412754595286200480
 Rigidbody2D:
   serializedVersion: 4
@@ -203,6 +204,7 @@ MonoBehaviour:
   mGraphics: {fileID: 5412754595286200486}
   mHealthbar: {fileID: 0}
   mHitSound: {fileID: 8300000, guid: be799553bce416848899725cc303c1a6, type: 3}
+  mDieSound: {fileID: 8300000, guid: 3a9f4b3de745b12428f8535730d759f8, type: 3}
 --- !u!70 &5412754595286200482
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

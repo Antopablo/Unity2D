@@ -5,6 +5,7 @@ public class CurrentSceneManager : MonoBehaviour
     // Start is called before the first frame update
     public int mCoinsPickedUpInThisSceneCount;
     public Vector3 mRespawnPoint;
+    public int mLevelToUnlock;
 
     public static CurrentSceneManager instance;
     private void Awake()

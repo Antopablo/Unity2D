@@ -23,15 +23,20 @@ public class Inventory : MonoBehaviour
     public void AddCoin(int count)
     {
         mCoinsCount += count;
-        mCoinsCountText.text = mCoinsCount.ToString();
+        UpdateTextUI();
 
     }
 
     public void RemoveCoin(int count)
     {
         mCoinsCount -= count;
-        mCoinsCountText.text = mCoinsCount.ToString();
+        UpdateTextUI();
 
+    }
+
+    public void UpdateTextUI()
+    {
+        mCoinsCountText.text = mCoinsCount.ToString();
     }
 
 }
