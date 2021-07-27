@@ -43,5 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c96e0c23b1a176741b53ca87e2601208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mCoinsCountText: {fileID: 0}
+  mPlayerEffects: {fileID: 0}
+  mContent: []
   mCoinsCount: 0
+  mCoinsCountText: {fileID: 0}
+  mItemImageUI: {fileID: 0}
+  mItemNameUI: {fileID: 0}
+  mEmptyItemImage: {fileID: 21300000, guid: b72416a804ab0f044bf121489a239258, type: 3}

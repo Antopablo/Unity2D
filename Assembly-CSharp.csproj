@@ -67,21 +67,27 @@
     <Compile Include="Assets\Scripts\GameOverManager.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\EnemyPatrol.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\LoadAndSaveData.cs" />
     <Compile Include="Assets\Scripts\HealPowerUp.cs" />
     <Compile Include="Assets\Scripts\LevelSelector.cs" />
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\PickUpObject.cs" />
+    <Compile Include="Assets\Scripts\PickUpCoin.cs" />
     <Compile Include="Assets\Scripts\PlayerMovements.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CurrentSceneManager.cs" />
+    <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\DeathZone.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
-    <Compile Include="Assets\DialogueTrigger.cs" />
-    <Compile Include="Assets\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\PickUpItem.cs" />
+    <Compile Include="Assets\Scripts\PlayerEffects.cs" />
+    <Compile Include="Assets\ShopTrigger.cs" />
+    <Compile Include="Assets\ShopManager.cs" />
+    <Compile Include="Assets\SellButtonItem.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Audio\Sound Effects\Effets_Collections\INFO.txt" />
