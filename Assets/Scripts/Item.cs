@@ -10,4 +10,5 @@ public class Item : ScriptableObject
     public int hpGiven;
     public int speedGiven;
     public float speedDuration;
+    public int price;
 }

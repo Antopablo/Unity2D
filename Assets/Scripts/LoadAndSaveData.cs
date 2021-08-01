@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class LoadAndSaveData : MonoBehaviour
 {
@@ -20,6 +21,19 @@ public class LoadAndSaveData : MonoBehaviour
         Inventory.instance.mCoinsCount = PlayerPrefs.GetInt("coinsCount", 0);
         Inventory.instance.UpdateTextUI();
 
+        // chargement
+        string[] lItemsSaved = PlayerPrefs.GetString("inventoryItem", "").Split(',');
+
+        for (int i = 0; i < lItemsSaved.Length; i++)
+        {
+            if (lItemsSaved[0] != "")
+            {
+                Inventory.instance.mContent.Add(ItemsDatabase.instance.mAllItems.Single(itm => itm.id == int.Parse(lItemsSaved[i])));
+            }
+        }
+
+        Inventory.instance.UpdateInventoryUI();
+
         //Sauvegarde la vie entres niveaux
         /*int lCurrentHealth = PlayerPrefs.GetInt("playerHealth", PlayerHealth.instance.mMaxHealth);
         PlayerHealth.instance.mCurrentHealth = lCurrentHealth;
@@ -30,14 +44,22 @@ public class LoadAndSaveData : MonoBehaviour
     {
         PlayerPrefs.SetInt("coinsCount", Inventory.instance.mCoinsCount);
         // enregistre uniquement si niveau débloqué > au niveau déjà débloqué
-        if (CurrentSceneManager.instance.mLevelToUnlock > PlayerPrefs.GetInt("levelReached",1))
+        if (CurrentSceneManager.instance.mLevelToUnlock > PlayerPrefs.GetInt("levelReached", 1))
         {
             PlayerPrefs.SetInt("levelReached", CurrentSceneManager.instance.mLevelToUnlock);
         }
 
+
+        // sauvegarde des items
+        string lItemInInventory = string.Join(",", Inventory.instance.mContent.Select(itm => itm.id));
+        PlayerPrefs.SetString("inventoryItem", lItemInInventory);
+
+        
+
         //Sauvegarde la vie entres niveaux
         //PlayerPrefs.SetInt("playerHealth", PlayerHealth.instance.mCurrentHealth);
     }
+
 
 
 }

@@ -19,3 +19,4 @@ MonoBehaviour:
   hpGiven: 20
   speedGiven: 0
   speedDuration: 0
+  price: 7
